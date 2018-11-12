@@ -4,7 +4,7 @@
   <div style="width: 100vw;     margin: 0 auto;">
     <div class="search__container">
 
-      <input class="search__input" type="text" v-model="searchUrl" placeholder="Search" @keyup.enter="search()"/>
+      <input class="search__input" type="text" v-model="searchUrl" placeholder="URL 입력 후 엔터!" @keyup.enter="search()"/>
 
     </div>
 

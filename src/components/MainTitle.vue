@@ -1,20 +1,26 @@
 <template>
+  <div class="root">
 
-  <a href="/" style="text-decoration: none">
-    <p class="title">
-      Image Getter
-    </p>
-  </a>
+    <a href="/" style="text-decoration: none">
+      <span class="title">
+        Image Getter
+      </span>
+    </a>
 
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "MainTitle"
-    }
+  export default {
+    name: "MainTitle"
+  }
 </script>
 
 <style lang="scss" scoped>
+
+  .root {
+    margin: 5vh 0 5vh 0;
+  }
 
   .title {
     font-size: 50px;
