@@ -24,15 +24,15 @@ if (process.env.NODE_ENV == 'production') {
     router,
     debug
   })
-
-  Vue.config.productionTip = false
-
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    store: index,
-    router,
-    components: { App },
-    template: '<App/>'
-  })
 }
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  store: index,
+  router,
+  components: { App },
+  template: '<App/>'
+})
