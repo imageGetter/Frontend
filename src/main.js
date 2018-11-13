@@ -19,19 +19,20 @@ if (process.env.NODE_ENV == 'production') {
     sendHitTask: true
   }
 
-Vue.use(VueAnalytics, {
-  id: 'UA-129141159-1',
-  router,
-  debug
-})
+  Vue.use(VueAnalytics, {
+    id: 'UA-129141159-1',
+    router,
+    debug
+  })
 
-Vue.config.productionTip = false
+  Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  store: index,
-  router,
-  components: { App },
-  template: '<App/>'
-})
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#app',
+    store: index,
+    router,
+    components: { App },
+    template: '<App/>'
+  })
+}
