@@ -6,9 +6,11 @@ import router from './router'
 import index from './store/index'
 import VueAnalytics from 'vue-analytics'
 
-Vue.config.productionTip = false
-
-let debug
+let debug = {
+  enable: false,
+  trace: false,
+  sendHitTask: false
+}
 
 if (process.env.NODE_ENV == 'production') {
   debug = {
@@ -16,13 +18,14 @@ if (process.env.NODE_ENV == 'production') {
     trace: false,
     sendHitTask: true
   }
-}
 
 Vue.use(VueAnalytics, {
   id: 'UA-129141159-1',
   router,
   debug
 })
+
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
