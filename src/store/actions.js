@@ -5,8 +5,8 @@ var server = "https://h4ctq2rv47.execute-api.ap-northeast-2.amazonaws.com/prod/i
 
 export default {
     [Const.GET_IMAGES] : (store, payload) => {
-        console.log(server + payload)
-        axios.get(server + payload)
+        console.log(server + encodeURIComponent(payload))
+        axios.get(server + encodeURIComponent(payload))
             .then((response) => {
                 store.commit(Const.GET_IMAGES, response.data)
             })
