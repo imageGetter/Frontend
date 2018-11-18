@@ -10,7 +10,10 @@ export default {
     store.commit(Const.CLEAR_IMAGES)
     store.commit(Const.LOADING_TRUE)
 
-    axios.get(server + encodeURIComponent(payload))
+    payload = encodeURI(payload)
+    payload = encodeURIComponent(payload)
+
+    axios.get(server + payload)
       .then((response) => {
         store.commit(Const.GET_IMAGES, response.data)
         store.commit(Const.LOADING_FALSE)
