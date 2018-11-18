@@ -2,8 +2,7 @@
   <div>
     <div style="height: 30px;"></div>
     <loading-spin/>
-    <img v-for="src in imageList" :src="src" :key="src">
-
+    <img class="image imageResizing" align=center v-for="src in imageList" :src="src" :key="src"/>
   </div>
 </template>
 
@@ -45,6 +44,15 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  .image {
+    margin: 3px;
+  }
 
+  .imageResizing {
+    max-width: 20vw;
+    max-height: 30vh;
+    width: auto;
+    height: auto;
+  }
 </style>
