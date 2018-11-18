@@ -34,7 +34,6 @@
     },
     methods: {
       search() {
-        console.log(this.searchUrl + "!!");
         this.$store.dispatch(Const.GET_IMAGES, this.searchUrl);
       }
     }

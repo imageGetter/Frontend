@@ -1,3 +1,4 @@
 export default {
-  imageList : []
+  imageList : [],
+  isLoading : false
 }

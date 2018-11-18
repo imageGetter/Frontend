@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="height: 30px;"></div>
-
+    <loading-spin/>
     <img v-for="src in imageList" :src="src" :key="src">
 
   </div>
@@ -9,9 +9,11 @@
 
 <script>
   import {mapGetters} from 'vuex';
+  import LoadingSpin from "./LoadingSpin";
 
   export default {
     name: "Images",
+    components: {LoadingSpin},
     computed:
       mapGetters({
         imageList: 'imageList'
