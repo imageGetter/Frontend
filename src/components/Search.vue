@@ -4,7 +4,7 @@
   <div style="width: 100vw; margin: 0 auto;">
     <div class="search__container">
       <input class="search__input" type="text" v-model="searchUrl" placeholder="URL 입력 후 엔터!" @keyup.enter="search()"/>
-      <button @click="search()" class="searchIcon"/>
+      <img src="http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg" @click="search()" class="searchIcon"/>
     </div>
 
     <!--
@@ -109,15 +109,12 @@
 
     border: 0px;
     color: #575756;
-    background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
-    background-color: transparent;
-    background-size: 18px 18px;
+
     transform: translate(-200%,10%);
 
     &:hover,
     &:focus {
       cursor: pointer;
-      outline: none;
     }
   }
 </style>
