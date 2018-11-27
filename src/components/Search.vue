@@ -1,11 +1,10 @@
 <!--https://codepen.io/mihaeltomic/pen/vmwMdm-->
 
 <template>
-  <div style="width: 100vw;     margin: 0 auto;">
+  <div style="width: 100vw; margin: 0 auto;">
     <div class="search__container">
-
       <input class="search__input" type="text" v-model="searchUrl" placeholder="URL 입력 후 엔터!" @keyup.enter="search()"/>
-
+      <button @click="search()" class="searchIcon"/>
     </div>
 
     <!--
@@ -49,25 +48,19 @@
       left: 50vw;
       top: 0;
       transform: translateX(-50%);
-      width: 50%;
+      width: 60%;
       padding-top: 0px;
     }
 
     &__input {
-      width: 100%;
-      padding: 12px 24px;
-
+      width: 80%;
+      padding: 12px 5px;
       background-color: transparent;
       transition: transform 250ms ease-in-out;
       font-size: 14px;
       line-height: 18px;
 
       color: #575756;
-      background-color: transparent;
-      background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
-      background-repeat: no-repeat;
-      background-size: 18px 18px;
-      background-position: 95% center;
       border-radius: 50px;
       border: 1px solid #575756;
       transition: all 250ms ease-in-out;
@@ -82,7 +75,6 @@
 
       &:hover,
       &:focus {
-        padding: 12px 0;
         outline: 0;
         border: 1px solid transparent;
         border-bottom: 1px solid #575756;
@@ -108,10 +100,24 @@
       text-decoration: none;
       transition: color 250ms ease-in;
 
-      &:hover,
-      &:focus {
-        color: color(#ff8b88 blackness(+25%));
-      }
+    }
+  }
+
+  .searchIcon {
+    width: 18px;
+    height: 18px;
+
+    border: 0px;
+    color: #575756;
+    background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
+    background-color: transparent;
+    background-size: 18px 18px;
+    transform: translate(-200%,10%);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      outline: none;
     }
   }
 </style>
